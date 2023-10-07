@@ -1,8 +1,8 @@
 ---
-name: 'Issue: Epic :'
-about: 'EPIC: <TITLE>'
-title: ''
-labels: ''
+name: 'Epic :'
+about: 'Issue for Epic'
+title: 'EPIC: <TITLE>'
+labels: 'epic'
 assignees: ''
 
 ---
