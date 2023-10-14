@@ -1,7 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User  
+from django.contrib.auth.models import User
 from django.db.models.signals import post_save
-
 
 class Profile(models.Model):
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -22,4 +21,3 @@ def create_user_profile(sender, instance, created, **kwargs):
         Profile.objects.create(owner=instance)
 
 post_save.connect(create_user_profile, sender=User)
-
