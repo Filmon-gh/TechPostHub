@@ -6,10 +6,10 @@ class Profile(models.Model):
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=255, blank=True, help_text="Your full name")
     bio = models.TextField(max_length=500, blank=True, help_text="A short biography")
-    profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, help_text="Upload a profile picture")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
+    profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, help_text="Upload a profile picture")
+    
     class Meta:
         ordering = ['-created_at']
 
