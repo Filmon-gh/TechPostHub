@@ -3,9 +3,9 @@ from .models import Profile
 
 class CustomProfileSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
-    is_owner = serializers.SerializerMethodField()
+    is_profile_owner = serializers.SerializerMethodField()
 
-    def get_is_owner(self, obj):
+    def get_is_profile_owner(self, obj):
         request = self.context['request']
         return request.user == obj.owner 
 
@@ -13,5 +13,5 @@ class CustomProfileSerializer(serializers.ModelSerializer):
         model = Profile
         fields = [
             'id', 'owner', 'created_at', 'updated_at', 'name',
-            'bio', 'profile_picture', 'is_owner' 
+            'bio', 'profile_picture', 'is_profile_owner'
         ]
