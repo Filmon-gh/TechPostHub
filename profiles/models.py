@@ -8,7 +8,7 @@ class Profile(models.Model):
     bio = models.TextField(max_length=500, blank=True, help_text="A short biography")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, help_text="Upload a profile picture")
+    profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, help_text="Upload a profile picture", default="../default_profile_nu4k1e.jpg")
     
     class Meta:
         ordering = ['-created_at']
