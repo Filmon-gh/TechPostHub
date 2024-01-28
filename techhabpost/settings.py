@@ -63,7 +63,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://techposthub-acad652d6abc.herokuapp.com']
+ALLOWED_HOSTS = ['techposthub-acad652d6abc.herokuapp.com']
 
 
 # Application definition
@@ -136,7 +136,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'techhabpost.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
